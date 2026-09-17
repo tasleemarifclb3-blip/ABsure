@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AbSure Biosciences provides recombinant proteins, antibodies and custom biotechnology solutions for research, diagnostics and discovery.">
+<title>AbSure Biosciences | Recombinant Proteins & Antibodies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* =========================================
+   DARK GRID HERO BACKGROUND (SCREENSHOT MATCH)
+========================================= */
+.home-hero {
+    background-color: #041424 !important; /* Deep Navy from screenshot */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at right center, rgba(0, 172, 193, 0.15) 0%, transparent 60%) !important;
+    background-size: 40px 40px, 40px 40px, 100% 100% !important;
+    background-position: center center !important;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Adjust text to pop on the dark background */
+.home-hero-copy h1 { color: #ffffff !important; }
+.home-hero-copy h1 span { color: #38bdf8 !important; } /* Bright cyan accent */
+.home-hero-copy p { color: #94a3b8 !important; }
+.home-hero-copy .eyebrow { color: #38bdf8 !important; }
+.hero-panel-label { color: #0b2545 !important; } /* Keep panel text dark since panel is light */
+
+/* =========================================
+   HORIZONTAL PRODUCT MARQUEE
+========================================= */
+.product-marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 30px 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    position: relative;
+}
+
+/* Fade edges for a professional look */
+.product-marquee::before, .product-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+.product-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+.product-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    /* 40s dictates the speed. Lower = faster */
+    animation: scrollMarquee 40s linear infinite;
+    min-width: 200%;
+}
+.marquee-track:hover {
+    animation-play-state: paused; /* Pauses when user hovers to click */
+}
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-card {
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.marquee-card:hover {
+    border-color: #00acc1;
+    box-shadow: 0 4px 12px rgba(0, 172, 193, 0.1);
+    transform: translateY(-2px);
+}
+.marquee-icon {
+    width: 45px;
+    height: 45px;
+    background: #0b2545;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #38bdf8;
+    font-weight: 800;
+    font-size: 11px;
+}
+.marquee-info h4 {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b2545;
+}
+.marquee-info span {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container topbar-inner"><span>Research-grade biological products & custom biotechnology solutions</span><div class="top-links"><a href="contact.html">Technical Support</a><a href="#resources">Resources</a><a href="contact.html">Contact</a></div></div></div>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html">
+    <img class="logo-icon" src="assets/branding/absure-icon.png" alt="AbSure Icon">
+    <img class="logo-text" src="assets/branding/absure-text.png" alt="AbSure Biosciences">
+</a>
+<nav class="desktop-menu">
+<div class="nav-item dropdown"><a href="products.html">Products <span>⌄</span></a><div class="mega-menu"><div><h4>Recombinant Proteins</h4><a href="products.html?category=proteins">Viral Proteins & Antigens</a><a href="products.html?category=proteins">Recombinant Proteins</a><a href="products.html?category=proteins">Research Proteins</a></div><div><h4>Antibody Technologies</h4><a href="products.html?category=antibodies">vNAR Libraries</a><a href="products.html?category=antibodies">VHH Libraries</a><a href="products.html?category=antibodies">scFv / Knob Libraries</a></div><div class="menu-feature"><span class="eyebrow">CATALOGUE</span><h3>Find a research reagent.</h3><p>Search AbSure products by target, catalogue number or product class.</p><a class="text-link" href="products.html">Browse products →</a></div></div></div>
+<div class="nav-item dropdown"><a href="services.html">Services <span>⌄</span></a><div class="simple-dropdown"><a href="services.html#protein">Recombinant Protein Expression</a><a href="services.html#antibody">Custom Antibody Development</a><a href="services.html#nanobody">Nanobody Discovery</a><a href="services.html#humanization">Antibody Humanization</a><a href="services.html#purification">Custom Protein Purification</a><a href="services.html#assay">Assay Development</a></div></div>
+<div class="nav-item"><a href="#solutions">Research Areas</a></div><div class="nav-item"><a href="#resources">Resources</a></div><div class="nav-item"><a href="about.html">About</a></div>
+</nav>
+<div class="brand-logos"><img class="make-india-global" src="assets/branding/make-in-india.svg" alt="Make in India"></div>
+<div class="nav-actions"><button class="search-button" id="searchButton">⌕ Search</button><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
+<button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button></div></header>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="products.html">Products</a><a href="services.html">Services</a><a href="#solutions">Research Areas</a><a href="#resources">Resources</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+<div class="search-overlay" id="searchOverlay"><button class="search-close" id="searchClose">×</button><div class="search-container"><span class="eyebrow light">PRODUCT SEARCH</span><h2>Find a product or target</h2><div class="large-search"><input id="globalSearch" type="text" placeholder="Search proteins, antibodies, targets or catalogue numbers"><button id="globalSearchButton">Search</button></div><div class="search-suggestions"><span>Try:</span><button>Nipah Virus</button><button>NiV-G</button><button>vNAR</button><button>VHH</button><button>scFv</button></div></div></div>
+
+<section class="home-hero"><div class="container home-hero-inner">
+<div class="home-hero-copy"><span class="eyebrow">RECOMBINANT PROTEINS • ANTIBODY TECHNOLOGIES</span><h1>Biological tools for <span>better discovery.</span></h1><p>AbSure Biosciences develops research-grade recombinant proteins, viral antigens and antibody discovery technologies for modern life-science research.</p>
+<div class="home-search"><input id="catalogInput" type="search" placeholder="Search by target, product name or catalogue number"><button id="catalogButton">Search Products</button></div>
+<div class="home-quicklinks"><a href="products.html?category=proteins">Recombinant proteins →</a><a href="products.html?category=antibodies">Antibody libraries →</a><a href="services.html">Custom development →</a></div></div>
+<div class="home-hero-panel"><div class="home-molecule"></div><div class="hero-panel-content"><div><span class="hero-panel-label">ABSURE BIOSCIENCES</span><h2>From biological target to research-ready reagent.</h2></div><p>Focused on quality, reproducibility and practical scientific support.</p><div class="hero-panel-stats"><div><strong>01</strong><span>NiV-G product</span></div><div><strong>04</strong><span>Discovery libraries</span></div><div><strong>∞</strong><span>Custom possibilities</span></div></div></div></div>
+</div></section>
+
+<!-- THE NEW HORIZONTAL MARQUEE PANEL -->
+<section class="product-marquee">
+  <div class="marquee-track">
+    <!-- Set 1 -->
+    <a href="products/ABS-RP-NIVG-001/index.html" class="marquee-card">
+      <div class="marquee-icon">NiV</div>
+      <div class="marquee-info"><h4>NiV-G ectodomain</h4><span>Recombinant Protein</span></div>
+    </a>
+    <a href="products/ABS-RP-DENV2-EDIII-001/index.html" class="marquee-card">
+      <div class="marquee-icon">DENV</div>
+      <div class="marquee-info"><h4>DENV2 EDIII</h4><span>Recombinant Protein</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">VHH</div>
+      <div class="marquee-info"><h4>Camelid VHH Library</h4><span>Antibody Technology</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">vNAR</div>
+      <div class="marquee-info"><h4>Shark vNAR Library</h4><span>Antibody Technology</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">scFv</div>
+      <div class="marquee-info"><h4>scFv Knob Library</h4><span>Antibody Technology</span></div>
+    </a>
+    <!-- Set 2 (Exact Duplicate for Infinite Loop) -->
+    <a href="products/ABS-RP-NIVG-001/index.html" class="marquee-card">
+      <div class="marquee-icon">NiV</div>
+      <div class="marquee-info"><h4>NiV-G ectodomain</h4><span>Recombinant Protein</span></div>
+    </a>
+    <a href="products/ABS-RP-DENV2-EDIII-001/index.html" class="marquee-card">
+      <div class="marquee-icon">DENV</div>
+      <div class="marquee-info"><h4>DENV2 EDIII</h4><span>Recombinant Protein</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">VHH</div>
+      <div class="marquee-info"><h4>Camelid VHH Library</h4><span>Antibody Technology</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">vNAR</div>
+      <div class="marquee-info"><h4>Shark vNAR Library</h4><span>Antibody Technology</span></div>
+    </a>
+    <a href="products.html?category=antibodies" class="marquee-card">
+      <div class="marquee-icon">scFv</div>
+      <div class="marquee-info"><h4>scFv Knob Library</h4><span>Antibody Technology</span></div>
+    </a>
+  </div>
+</section>
+
+<div class="home-product-strip"><div class="container home-product-strip-inner">
+<a href="products.html?category=proteins"><span>PRODUCTS</span><h3>Recombinant Proteins</h3><p>Proteins and antigens for research and assay development.</p></a>
+<a href="products.html?category=antibodies"><span>ANTIBODY TECHNOLOGY</span><h3>vNAR & VHH Libraries</h3><p>Single-domain discovery platforms for challenging targets.</p></a>
+<a href="products.html?category=antibodies"><span>ANTIBODY TECHNOLOGY</span><h3>scFv / Knob Libraries</h3><p>Specialized libraries for antibody discovery workflows.</p></a>
+<a href="services.html"><span>SERVICES</span><h3>Custom Development</h3><p>Protein, antibody and assay solutions around your target.</p></a>
+</div></div>
+
+<section class="home-intro"><div class="container home-intro-grid"><div><span class="eyebrow">ABOUT ABSURE</span><h2>Research reagents built around real biological questions.</h2></div><div class="home-intro-copy"><p>AbSure Biosciences focuses on recombinant proteins, viral antigens and antibody discovery technologies that help researchers move from a biological question to a usable experimental tool.</p><p>Our catalogue will grow product by product. Each product has its own dedicated page, images, datasheet and CoA so information stays organized and easy to maintain.</p><a class="text-link" href="about.html">Learn more about AbSure →</a></div></div></section>
+
+<section class="home-feature">
+  <div class="container">
+    <div class="section-heading">
+      <div><span class="eyebrow">FEATURED PRODUCT</span><h2>Research-ready Recombinant Proteins</h2></div>
+      <a class="text-link" href="products.html">View all products →</a>
+    </div>
+
+    <!-- Product 1: NiV-G (Only One Featured Product Now) -->
+    <div class="feature-product-card" style="margin-bottom: 30px;">
+      <div class="feature-product-visual" style="background-color: #0b2545; position: relative; padding: 10px; box-sizing: border-box;">
+  <img src="products/ABS-RP-NIVG-001/images/3d_pymol.png" alt="3D Structure" style="width: 100%; height: 100%; object-fit: contain; background-color: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px;">
+  <span style="position: absolute; bottom: 35px; right: 35px; font-size: 11px; font-weight: 700; color: #334155; background: rgba(248, 250, 252, 0.9); padding: 4px 8px; border-radius: 6px; border: 1px solid #cbd5e1;">
+    Depiction from PyMOL (PDB: XXXX)
+  </span>
+</div>
+      <div class="feature-product-copy">
+        <span class="eyebrow">RECOMBINANT PROTEIN</span>
+        <h2>NiV-G ectodomain</h2>
+        <p>A research-grade recombinant NiV-G ectodomain for diagnostic assay development, antibody screening and vaccine research.</p>
+        <div class="feature-meta">
+          <div><strong>Catalogue</strong><span>ABS-RP-NIVG-001</span></div>
+          <div><strong>Expression</strong><span>Expi293F</span></div>
+          <div><strong>Protein size</strong><span>~73 kDa</span></div>
+          <div><strong>Format</strong><span>Recombinant protein</span></div>
+        </div>
+        <a class="btn btn-primary" href="products/ABS-RP-NIVG-001/index.html">View Full Product →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="home-services"><div class="container home-services-grid"><div><span class="eyebrow light">CUSTOM DEVELOPMENT</span><h2>Need a reagent that isn't in the catalogue?</h2><p>Work with AbSure on custom recombinant protein expression, antibody development, nanobody discovery, purification and assay development.</p><a class="btn btn-white" href="services.html">Explore Services →</a></div><div class="service-pill-grid"><div class="service-pill"><strong>Recombinant Protein Expression</strong><span>Expression & purification strategies</span></div><div class="service-pill"><strong>Custom Antibody Development</strong><span>Target-specific antibody workflows</span></div><div class="service-pill"><strong>Nanobody Discovery</strong><span>Single-domain binder discovery</span></div><div class="service-pill"><strong>Assay Development</strong><span>Application-focused development</span></div></div></div></section>
+
+<section class="home-trust"><div class="container"><div class="section-heading centered"><span class="eyebrow">WHY ABSURE</span><h2>A focused approach to research reagents</h2></div><div class="trust-grid"><div><strong>Scientific focus</strong><span>Products centered on proteins and antibody technologies.</span></div><div><strong>Organized catalogue</strong><span>Dedicated product pages with product-specific files.</span></div><div><strong>Custom capability</strong><span>Solutions for targets that need more than an off-the-shelf reagent.</span></div><div><strong>Indian biotech</strong><span>Research products developed from an India-based biotechnology platform.</span></div></div></div></section>
+
+<section class="section resources" id="resources"><div class="container"><div class="section-heading centered"><span class="eyebrow">SCIENTIFIC RESOURCES</span><h2>Product information and scientific support</h2><p>Datasheets, CoAs, technical information and direct scientific support will grow alongside the catalogue.</p></div><div class="resource-grid"><a href="products.html" class="resource-card"><span>CATALOGUE</span><h3>Browse products</h3><p>Find recombinant proteins and antibody technologies.</p>→</a><a href="products/ABS-RP-NIVG-001/index.html" class="resource-card"><span>DOCUMENTS</span><h3>Product documentation</h3><p>View the NiV-G product page, datasheet and CoA.</p>→</a><a href="contact.html" class="resource-card"><span>SCIENTIFIC SUPPORT</span><h3>Talk to AbSure</h3><p>Discuss your target, application or custom requirement.</p>→</a></div></div></section>
+
+<section class="cta"><div class="container cta-inner"><div><span class="eyebrow light">START A PROJECT</span><h2>Have a target in mind?</h2><p>Tell us what you are working on and we can discuss the right product or custom route.</p></div><a href="contact.html" class="btn btn-white">Talk to Our Scientists →</a></div></section>
+
+<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><a class="logo footer-logo" href="index.html"><img class="logo-image" src="assets/branding/absure-logo.svg" alt="AbSure Biosciences"></a><p>Research-grade proteins, antibodies and biotechnology solutions for modern life science.</p></div><div><h4>Products</h4><a href="products.html?category=proteins">Recombinant Proteins</a><a href="products.html?category=antibodies">Antibody Libraries</a><a href="products.html">All Products</a></div><div><h4>Services</h4><a href="services.html#protein">Protein Expression</a><a href="services.html#antibody">Antibody Development</a><a href="services.html#nanobody">Nanobody Discovery</a><a href="services.html#assay">Assay Development</a></div><div><h4>Company</h4><a href="about.html">About AbSure</a><a href="#resources">Resources</a><a href="contact.html">Contact</a></div></div><div class="container footer-bottom"><span>© 2026 AbSure Biosciences Pvt. Ltd.</span><div><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
